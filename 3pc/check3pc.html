@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script>
+      (function () {
+        if (window.parent) {
+          const message = /3pc=1/.test(document.cookie) ? '3pcSupported' : '3pcUnsupported';
+          window.parent.postMessage(message, "*");
+        }
+      })();
+    </script>
+  </body>
+</html>
